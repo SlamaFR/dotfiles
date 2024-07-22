@@ -819,7 +819,7 @@
   typeset -g POWERLEVEL9K_RAM_FOREGROUND=0
   typeset -g POWERLEVEL9K_RAM_BACKGROUND=3
   # Custom icon.
-  typeset -g POWERLEVEL9K_RAM_VISUAL_IDENTIFIER_EXPANSION=''
+  typeset -g POWERLEVEL9K_RAM_VISUAL_IDENTIFIER_EXPANSION=''
 
   #####################################[ swap: used swap ]######################################
   # Swap color.
@@ -841,7 +841,7 @@
   typeset -g POWERLEVEL9K_LOAD_CRITICAL_FOREGROUND=0
   typeset -g POWERLEVEL9K_LOAD_CRITICAL_BACKGROUND=1
   # Custom icon.
-  typeset -g POWERLEVEL9K_LOAD_VISUAL_IDENTIFIER_EXPANSION=''
+  typeset -g POWERLEVEL9K_LOAD_VISUAL_IDENTIFIER_EXPANSION=''
 
   ################[ todo: todo items (https://github.com/todotxt/todo.txt-cli) ]################
   # Todo color.
@@ -1611,7 +1611,7 @@
   # Show battery in yellow when it's discharging.
   typeset -g POWERLEVEL9K_BATTERY_DISCONNECTED_BACKGROUND=3
   # Battery pictograms going from low to high level of charge.
-  typeset -g POWERLEVEL9K_BATTERY_STAGES=''
+  typeset -g POWERLEVEL9K_BATTERY_STAGES='󰂎󰁺󰁻󰁼󰁽󰁾󰁿󰂀󰂁󰂂󰁹'
   # Don't show the remaining time to charge/discharge.
   typeset -g POWERLEVEL9K_BATTERY_VERBOSE=false
   typeset -g POWERLEVEL9K_BATTERY_FOREGROUND=0
