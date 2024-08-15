@@ -483,14 +483,20 @@
     # in this case.
     (( VCS_STATUS_HAS_UNSTAGED == -1 )) && res+=" ${modified}─"
 
-    [[ -n $VCS_STATUS_ACTION     ]] && res+=" %1F[${VCS_STATUS_ACTION}]"
+    # [[ -n $VCS_STATUS_ACTION     ]] && res+=" %1F[${VCS_STATUS_ACTION}]"
 
     typeset -g my_git_format=$res
   }
   functions -M my_git_formatter 2>/dev/null
 
   function prompt_vsc_action() {
-    # [[ -n $VCS_STATUS_ACTION ]] && p10k segment -t "$VCS_STATUS_ACTION" -f 0 -b 1
+    source "${ZSH}/custom/themes/powerlevel10k/gitstatus/gitstatus.plugin.zsh"
+    gitstatus_start 'MY'
+    gitstatus_query 'MY'
+
+    [[ -n $VCS_STATUS_ACTION ]] && p10k segment -t "$VCS_STATUS_ACTION" -f 0 -b 1
+    
+    gitstatus_stop 'MY'
   }
 
   # Don't count the number of unstaged, untracked and conflicted files in Git repositories with
