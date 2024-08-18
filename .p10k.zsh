@@ -35,7 +35,7 @@
     os_icon                 # os identifier
     dir                     # current directory
     vcs                     # git status
-    vsc_action              # git current action
+    vcs_action              # git current action
     # =========================[ Line #2 ]=========================
     newline                 # \n
     # prompt_char           # prompt symbol
@@ -489,7 +489,7 @@
   }
   functions -M my_git_formatter 2>/dev/null
 
-  function prompt_vsc_action() {
+  function prompt_vcs_action() {
     source "${ZSH}/custom/themes/powerlevel10k/gitstatus/gitstatus.plugin.zsh"
     gitstatus_start 'MY'
     gitstatus_query 'MY'
@@ -511,7 +511,7 @@
   # Don't show Git status in prompt for repositories whose workdir matches this pattern.
   # For example, if set to '~', the Git repository at $HOME/.git will be ignored.
   # Multiple patterns can be combined with '|': '~(|/foo)|/bar/baz/*'.
-  # typeset -g POWERLEVEL9K_VCS_DISABLED_WORKDIR_PATTERN='~'
+  typeset -g POWERLEVEL9K_VCS_DISABLED_WORKDIR_PATTERN='~'
 
   # Disable the default Git status formatting.
   typeset -g POWERLEVEL9K_VCS_DISABLE_GITSTATUS_FORMATTING=true

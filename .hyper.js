@@ -122,7 +122,7 @@ module.exports = {
         // todo: does not pick up config changes automatically, need to restart terminal :/
         webLinksActivationKey: '',
         // if `false` (without backticks and without quotes), Hyper will use ligatures provided by some fonts
-        disableLigatures: true,
+        disableLigatures: false,
         // set to true to disable auto updates
         disableAutoUpdates: false,
         // set to true to enable screen reading apps (like NVDA) to read the contents of the terminal
